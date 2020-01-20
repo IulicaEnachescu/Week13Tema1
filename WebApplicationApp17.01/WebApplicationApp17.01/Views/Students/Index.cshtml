@@ -28,18 +28,19 @@
                                 <th>FistName</th>
                                 <th>LastName</th>
                                 <th>Email</th>
+                                <th>Link</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
-                            <tr>
-                                <td>@item.Id</td>
-                               
-                                <td>@item.FirstName</td>
-                                <td>@item.LastName</td>
-                                <td>@item.Email</td>
-                            </tr>
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.FirstName</td>
+                                    <td>@item.LastName</td>
+                                    <td>@item.Email</td>
+                                    <td><a href="/Students/ById/@item.Id">Go</a></td>
+                                </tr>
 
                             }
                         </tbody>
