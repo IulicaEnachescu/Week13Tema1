@@ -1,0 +1,55 @@
+﻿@*declarare model curent al pag si il transmitem din controler*@
+
+@model  List<WebApplicationApp17._01.Models.User>
+
+<body>
+    <h1>Users Page</h1>
+    @{
+        <div>
+            Date: @DateTime.Now
+            @{
+                var x = 100;
+                var y = 200;
+                var z = x + y;
+            }
+            <div> @z</div>
+            <div>
+                @ViewBag.User
+            </div>
+           <div>
+            @{
+                ViewBag.Title = "Index";
+            }
+           </div>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Id
+                                </td>
+                                <td>@item.Name</td>
+                                <td>@item.Email</td>
+                            </tr>
+                            
+                        }
+                    </tbody>
+                </table>
+             </div>
+            <h2>Index</h2>
+        </div>
+    }
+</body>
+
+
+

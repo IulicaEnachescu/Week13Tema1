@@ -1,0 +1,43 @@
+﻿
+
+@*declarare model curent al pag si il transmitem din controler*@
+
+@model  WebApplicationApp17._01.Models.Student
+
+
+<div class="container">
+    <h2>Student ById</h2>
+</div>
+
+<div class="container">
+    <div class="table table-responsive">
+        <table class=" table table-responsive" style="background-color:lavender;">
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.FirstName</td>
+                    <td>@Model.LastName</td>
+                    <td>@Model.Email</td>
+                </tr>
+            </tbody>
+        </table>
+      
+    </div> 
+</div>
+
+
+<div>
+    <h3>First name: @Model.FirstName</h3>
+</div>
+<div>
+    <h3>Last name: @Model.LastName</h3>
+</div>
+<div>
+   <h3> @Model.Email </h3>
+</div>

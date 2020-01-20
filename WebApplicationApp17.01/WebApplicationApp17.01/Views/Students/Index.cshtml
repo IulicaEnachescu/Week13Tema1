@@ -1,0 +1,54 @@
+﻿@*declarare model curent al pag si il transmitem din controler*@
+
+@model  List<WebApplicationApp17._01.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Students Page</h2>
+<h2>Index</h2>
+
+
+<body>
+    <div class=container>
+        <div class="row">
+            Date: @DateTime.Now
+        </div>
+    </div>
+
+    <div class=container>
+        <div class="row">
+
+            <div class="col">
+                <div class="table table-responsive">
+                    <table class="table table-bordered">
+                        <caption><h2>List of students</h2></caption>
+                        <thead style="background-color:lavender;">
+                            <tr>
+                                <th>Id</th>
+                                <th>FistName</th>
+                                <th>LastName</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>@item.Id</td>
+                               
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.Email</td>
+                            </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                       
+        </div>
+    </div>
+
+</body>
+
